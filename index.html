@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <!-- Style Sheets -->
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <!-- Library Scripts -->
+    <script src="lib/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+
+    <!--Application Scripts -->
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <script src="productDetails/productService.js"></script>
+
+    <!-- Employee controller -->
+    <script src="productDetails/productController.js"></script>
+    <script src="productView/productViewController.js"></script>
+    <script src="productEdit/productEditController.js"></script>
+    <script src="productAdd/productAddController.js"></script>
+</head>
+<body bgcolor="#a9a9a9">
+<nav class="navbar navbar-default">
+    <div class="container">
+        <a class="navbar-brand" ui-sref="home">Product Management</a>
+        <div class="navbar-header">
+            <button type="button"
+                    class="navbar-toggle"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="productList({load:1})">Product List</a></li>
+                <li><a ui-sref="productAdd"><i class="glyphicon glyphicon-plus"></i> Add Product </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div ui-view></div>
+</div>
+
+
+</body>
+</html>

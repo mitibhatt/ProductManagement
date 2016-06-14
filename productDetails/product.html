@@ -1,0 +1,49 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size:large">
+        Product List
+    </div >
+    <div class="panel-body">
+        <table class="table">
+            <!--vm is an alias name, the same name is used in controller,
+             but that does not need to be same.-->
+            <thead>
+            <tr>
+                <th>Product code</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Remarks</th>
+                <th>
+                    <button class="btn btn-primary" type="button" ng-click="vm.toggleImage()">
+
+                        {{showImage?"Hide":"Show"}} Image
+                    </button>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="row in vm.product">
+
+                <td><a ui-sref="productDetail({id: vm.product.indexOf(row)})"> {{row.pcode}}</a> </td>
+
+                <td>
+                    {{row.pname}}
+                </td>
+                <td>
+                    {{row.pprice}}
+                </td>
+                <td>
+                    {{row.pdesc}}
+                </td>
+
+                <td><img ng-src="{{row.pimage}}" ng-if="vm.showImage" style="width: 50px;height:50px;align-items:center" title="{{row.pname}}"></td>
+
+                <td>
+                    <a class="btn btn-primary" ui-sref="productEdit({id: vm.product.indexOf(row)})"> Edit </a>
+                </td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="container">
+<div class="panel-primary">
+
+<div class="form-group">
+            <form name="productForm" ng-submit="vm.submitForm()" novalidate>
+
+                <label class="control-label">Product code:</label>
+                <input type="text" class="form-control" ng-model="vm.product.pcode" name="txtCode" ng-minlength="2" ng-maxlength="2" required>
+
+                <div class="form-errors" ng-if="productForm.txtCode.$invalid && productForm.txtCode.$touched">Error</div>
+
+                <label class="control-label">Product name:</label>
+                <input type="text" class="form-control" ng-model="vm.product.pname" name="txtName" ng-minlength="3" ng-maxlength="30"
+                       required>
+
+                <div class="form-errors" ng-if="productForm.txtName.$invalid && productForm.txtName.$touched">Please enter product name</div>
+
+                <label class="control-label">Product description:</label>
+                <input class="form-control" ng-model="vm.product.pdesc" name="txtDesc" required>
+
+                <div class="form-errors" ng-if="productForm.txtDesc.$invalid && productForm.txtDesc.$touched">Please enter product description</div>
+
+                <label class="control-label">Price:</label>
+                <input type="text" id="txtPrice" class="form-control" ng-model="vm.product.pprice" name="txtPrice" required>
+
+                <div class="form-errors" ng-if="productForm.txtPrice.$invalid && productForm.txtPrice.$touched">Please enter product price</div>
+
+                <label class="control-label">Category:</label>
+                <input class="form-control" id="txtCategory" ng-model="vm.product.pcategory" name="txtCategory" required>
+
+                <div class="form-errors" ng-if="productForm.txtCategory.$invalid && productForm.txtCategory.$touched">Please enter product category</div>
+
+                <label class="control-label">Image path:</label>
+                <input class="form-control" id="txtImage" ng-model="vm.product.pimage" name="txtImage" required>
+
+                <div class="form-errors" ng-if="productForm.txtImage.$invalid && productForm.txtImage.$touched">Please enter product image</div>
+
+                <input type="submit" value="Submit" class="btn-primary" ng-disabled="productForm.$invalid">
+
+            </form>
+</div>
+    </div>
+
+</div>

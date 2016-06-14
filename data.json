@@ -1,0 +1,43 @@
+[
+    {
+      "pcode": "01",
+      "pname": "ABC",
+      "pdesc": "product 1",
+      "pprice": "20",
+      "pcategory": "Category 1",
+      "pimage": "images/Basketball.png"
+    },
+    {
+      "pcode": "02",
+      "pname": "XYZ",
+      "pdesc": "product 2",
+      "pprice": "50",
+      "pcategory": "Category 2",
+      "pimage": "images/dice.png"
+    },
+    {
+      "pcode": "03",
+      "pname": "WER",
+      "pdesc": "product 3",
+      "pprice": "80",
+      "pcategory": "Category 3",
+      "pimage": "images/icecream.png"
+    },
+    {
+      "pcode": "04",
+      "pname": "GHJ",
+      "pdesc": "product 4",
+      "pprice": "100",
+      "pcategory": "Category 4",
+      "pimage": "images/Mushroom.png"
+    },
+    {
+      "pcode": "05",
+      "pname": "MNO",
+      "pdesc": "product 5",
+      "pprice": "60",
+      "pcategory": "Category 5",
+      "pimage": "images/umbrella.png"
+    }
+  ]
+
